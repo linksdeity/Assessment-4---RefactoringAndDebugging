@@ -8,14 +8,31 @@ namespace RefactoringDebugging
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
 
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+        //Refactor the following program so that we get the expected output of 21
+
+
+        static void Main(string[] args) { int[] array1 = { 1, 2, 3, 4, 5, 6 };
+
+
+            int result = GetSum(array1);
+
+            Console.WriteLine(result);
+
+            Console.ReadKey(true);
+        }
+
+
+        static int GetSum(int[] array1)
+        {
+            int sum = 0;
+
+            foreach (int item in array1)
+            {
+                sum = sum + item;
+            }
+
+            return sum;
         }
     }
 }
